@@ -1,3 +1,5 @@
+import Profile from '../assets/tiago-profile.png';
+
 export default function About() {
   return (
     <section id='about' className='py-20 px-4 bg-card/50'>
@@ -8,7 +10,7 @@ export default function About() {
           <div className='flex justify-center'>
             <div className='w-64 h-64 md:w-72 md:h-72 rounded-full bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden'>
               <img
-                src='/tiago-profile.png'
+                src={Profile}
                 alt='Developer portrait'
                 className='w-full h-full object-cover rounded-full'
               />

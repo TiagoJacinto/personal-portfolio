@@ -1,3 +1,5 @@
+import HeroImage from '../assets/hero-image.svg';
+
 export default function Hero() {
   return (
     <section
@@ -27,7 +29,7 @@ export default function Hero() {
         </button>
       </div>
 
-      <img src='/hero-image.svg' alt='Tiago - Frontend Developer' className='min-h-0' />
+      <img src={HeroImage} alt='Tiago - Frontend Developer' className='min-h-0' />
     </section>
   );
 }
