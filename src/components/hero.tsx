@@ -38,14 +38,16 @@ export default function Hero() {
 }
 
 function Loader() {
+  const ratio = 0.75024;
   return (
     <ContentLoader
       speed={2}
-      width={1041}
-      height={554}
+      width={1041 * ratio}
+      height={554 * ratio}
       backgroundColor='#f0f0f0'
       foregroundColor='#e0e0e0'
       viewBox='0 0 1041 554'
+      preserveAspectRatio='xMidYMid meet'
     >
       <rect x='0' y='0' rx='8' ry='8' width='1041' height='554' />
     </ContentLoader>
@@ -56,7 +58,7 @@ function HeroImage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <>
+    <div>
       {!isLoaded && <Loader />}
       <img
         src={HeroImg}
@@ -64,6 +66,6 @@ function HeroImage() {
         onLoad={() => setIsLoaded(true)}
         className={cn('min-h-0', !isLoaded && 'hidden')}
       />
-    </>
+    </div>
   );
 }
