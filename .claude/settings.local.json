@@ -1,0 +1,12 @@
+{
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7",
+    "perplexity"
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(rm:*)"
+    ]
+  }
+}
