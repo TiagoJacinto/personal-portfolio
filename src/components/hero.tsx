@@ -1,4 +1,7 @@
-import HeroImage from '../assets/hero-image.svg';
+import { useState } from 'react';
+import HeroImg from '../assets/hero-image.svg';
+import ContentLoader from 'react-content-loader';
+import { cn } from '@/lib/utils';
 
 export default function Hero() {
   return (
@@ -29,7 +32,38 @@ export default function Hero() {
         </button>
       </div>
 
-      <img src={HeroImage} alt='Tiago - Frontend Developer' className='min-h-0' />
+      <HeroImage />
     </section>
+  );
+}
+
+function Loader() {
+  return (
+    <ContentLoader
+      speed={2}
+      width={1041}
+      height={554}
+      backgroundColor='#f0f0f0'
+      foregroundColor='#e0e0e0'
+      viewBox='0 0 1041 554'
+    >
+      <rect x='0' y='0' rx='8' ry='8' width='1041' height='554' />
+    </ContentLoader>
+  );
+}
+
+function HeroImage() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <>
+      {!isLoaded && <Loader />}
+      <img
+        src={HeroImg}
+        alt='Tiago - Frontend Developer'
+        onLoad={() => setIsLoaded(true)}
+        className={cn('min-h-0', !isLoaded && 'hidden')}
+      />
+    </>
   );
 }

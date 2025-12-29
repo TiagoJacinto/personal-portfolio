@@ -128,6 +128,9 @@ importers:
       react:
         specifier: 19.2.0
         version: 19.2.0
+      react-content-loader:
+        specifier: ^7.1.1
+        version: 7.1.1(react@19.2.0)
       react-day-picker:
         specifier: 9.8.0
         version: 9.8.0(react@19.2.0)
@@ -2191,6 +2194,12 @@ packages:
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+
+  react-content-loader@7.1.1:
+    resolution: {integrity: sha512-yNkqtd+15wXRLfDKZb5nTqDV2fPTG2kpUgeGRb+WBz43bU0j4DSGXETF0bnFr44fAoTPpm0Dya0WGdhpHSvtYA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16.0.0'
 
   react-day-picker@9.8.0:
     resolution: {integrity: sha512-E0yhhg7R+pdgbl/2toTb0xBhsEAtmAx1l7qjIWYfcxOy8w4rTSVfbtBoSzVVhPwKP/5E9iL38LivzoE3AQDhCQ==}
@@ -4424,6 +4433,10 @@ snapshots:
       react-is: 16.13.1
 
   punycode@2.3.1: {}
+
+  react-content-loader@7.1.1(react@19.2.0):
+    dependencies:
+      react: 19.2.0
 
   react-day-picker@9.8.0(react@19.2.0):
     dependencies:
